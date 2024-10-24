@@ -1,5 +1,5 @@
 {% set name = "crawl4ai" %}
-{% set version = "0.3.71" %}
+{% set version = "0.3.72" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/crawl4ai-{{ version }}.tar.gz
-  sha256: f533530313bfc89ab3234e262bd2467d9c9540367b37cb0812893b1f732509bb
+  sha256: 2aef223aaf1e8104dc6ea0325d9440d88ac25e9756dcf624e504bd00a774689b
 
 build:
   entry_points:
