@@ -1,5 +1,5 @@
 {% set name = "crawl4ai" %}
-{% set version = "0.3.72" %}
+{% set version = "0.3.73" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/crawl4ai-{{ version }}.tar.gz
-  sha256: 2aef223aaf1e8104dc6ea0325d9440d88ac25e9756dcf624e504bd00a774689b
+  sha256: fc7c0c3ae2291e3a21f34bcc8fe98373c8ac4001ec1a0035ab5715fd175e388a
 
 build:
   entry_points:
@@ -22,19 +22,19 @@ requirements:
     - pip
     - setuptools
   run:
-    - playwright-stealth ==1.0.6
-    - playwright ==1.47.0
+    - playwright-stealth >=1.0,<2.dev0
+    - playwright <1.48,>=1.47
     - python >=3.7
-    - aiosqlite ==0.20.0
-    - html2text ==2024.2.26
-    - lxml ==5.3.0
-    - litellm ==1.48.0
-    - numpy <2.1.1,>=1.26.0
-    - pillow ==10.4.0
+    - aiosqlite >=0.20,<1.dev0
+    - html2text >=2024.2,<2025.dev0
+    - lxml >=5.3,<6.dev0
+    - litellm >=1.48,<2.dev0
+    - numpy <3,>=1.26.0
+    - pillow >=10.4,<11.dev0
     - playwright-python ==1.47.0
-    - python-dotenv ==1.0.1
-    - requests <2.32.3,>=2.26.0
-    - beautifulsoup4 ==4.12.3
+    - python-dotenv >=1.0,<2.dev0
+    - requests >=2.26,<3.dev0
+    - beautifulsoup4 >=4.12,<5.dev0
 
 test:
   imports:
