@@ -1,5 +1,5 @@
 {% set name = "crawl4ai" %}
-{% set version = "0.3.73" %}
+{% set version = "0.3.731" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/crawl4ai-{{ version }}.tar.gz
-  sha256: fc7c0c3ae2291e3a21f34bcc8fe98373c8ac4001ec1a0035ab5715fd175e388a
+  sha256: 762495ce3bc119467e9f2777e450355eab6ac827ec47849ded61d6e3945811c0
 
 build:
   entry_points:
@@ -22,6 +22,7 @@ requirements:
     - pip
     - setuptools
   run:
+    - tf-playwright-stealth >=1.0,<2.dev0
     - playwright-stealth >=1.0,<2.dev0
     - playwright <1.48,>=1.47
     - python >=3.7
