@@ -14,17 +14,17 @@ build:
     - crawl4ai-download-models=crawl4ai.model_loader:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
     - playwright-stealth >=1.0,<2.dev0
     - playwright <1.48,>=1.47
-    - python >=3.7
+    - python >={{ python_min }}
     - aiosqlite >=0.20,<1.dev0
     - html2text >=2024.2,<2025.dev0
     - lxml >=5.3,<6.dev0
@@ -44,6 +44,7 @@ test:
     - crawl4ai-download-models --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/unclecode/crawl4ai
