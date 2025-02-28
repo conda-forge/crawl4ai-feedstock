@@ -11,8 +11,11 @@ source:
 
 build:
   number: 0
+  python:
+    entry_points:
+      - crawl4ai-download-models=crawl4ai.model_loader:main
   noarch: python
-  script: ${{ PYTHON }} -m pip install .
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
@@ -52,6 +55,8 @@ tests:
       imports:
         - crawl4ai
       pip_check: true
+  - script:
+      - crawl4ai-download-models --help
 
 about:
   homepage: https://github.com/unclecode/crawl4ai
