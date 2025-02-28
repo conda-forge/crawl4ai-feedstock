@@ -1,0 +1,65 @@
+context:
+  version: 0.3.743
+
+package:
+  name: crawl4ai
+  version: ${{ version }}
+
+source:
+  - url: https://pypi.org/packages/source/c/crawl4ai/crawl4ai-${{ version }}.tar.gz
+    sha256: 429e7703855102bc3422cf3538e61e2fe12b2d0b7fb696e87ee8253349aa467a
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install .
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - pip
+    - setuptools
+  run:
+    - python >=${{ python_min }}
+    - aiosqlite >=0.20
+    - lxml >=5.3,<6.dev0
+    - litellm >=1.53.1
+    - numpy >=1.26.0,<3
+    - pillow >=10.4,<11.dev0
+    - playwright-python >=1.47,<1.48
+    - python-dotenv >=1.0,<2.dev0
+    - requests >=2.26,<3.dev0
+    - beautifulsoup4 >=4.12,<5.dev0
+    - tf-playwright-stealth >=1.1.0
+    - python-xxhash >=3.4,<4.dev0
+    - rank-bm25 >=0.2
+    - aiofiles >=24.1.0
+    - colorama >=0.4
+    - snowballstemmer >=2.2
+    - pydantic >=2.10
+    - pyopenssl >=24.3.0
+    - psutil >=6.1.1
+    - nltk >=3.9.1
+    - rich >=13.9.4
+    - cssselect >=1.2.0
+    - httpx ==0.27.2
+    - html2text
+    - fake-useragent >=2.0.3
+
+tests:
+  - python:
+      python_version: ${{ python_min }}.*
+      imports:
+        - crawl4ai
+      pip_check: true
+
+about:
+  homepage: https://github.com/unclecode/crawl4ai
+  summary: "🔥🕷️ Crawl4AI: Open-source LLM Friendly Web Crawler & scraper"
+  license: Apache-2.0
+  license_file: LICENSE
+
+extra:
+  recipe-maintainers:
+    - jan-janssen
+    - moritzwilksch
