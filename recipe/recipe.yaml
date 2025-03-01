@@ -1,5 +1,5 @@
 context:
-  version: 0.3.743
+  version: "0.4.248"
 
 package:
   name: crawl4ai
@@ -7,7 +7,7 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/c/crawl4ai/crawl4ai-${{ version }}.tar.gz
-    sha256: 429e7703855102bc3422cf3538e61e2fe12b2d0b7fb696e87ee8253349aa467a
+    sha256: ae0da8d4bbde09a9985a9f5797ed351172adc82df1266cf55ef10526abf66e46
 
 build:
   number: 0
