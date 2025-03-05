@@ -1,5 +1,5 @@
 context:
-  version: "0.4.248"
+  version: "0.5.0.post1"
 
 package:
   name: crawl4ai
@@ -7,7 +7,7 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/c/crawl4ai/crawl4ai-${{ version }}.tar.gz
-    sha256: ae0da8d4bbde09a9985a9f5797ed351172adc82df1266cf55ef10526abf66e46
+    sha256: 8cdd36778579a45f6ae0115bc7bb85c5079be0cc8c1b6082d6934513be64828a
 
 build:
   number: 0
@@ -48,6 +48,9 @@ requirements:
     - httpx ==0.27.2
     - html2text
     - fake-useragent >=2.0.3
+    - faust-cchardet
+    - humanize
+    - pyperclip
 
 tests:
   - python:
