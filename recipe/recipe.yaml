@@ -51,6 +51,7 @@ requirements:
     - faust-cchardet
     - humanize
     - pyperclip
+    - chardet
 
 tests:
   - python:
