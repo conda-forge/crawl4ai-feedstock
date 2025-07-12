@@ -39,7 +39,7 @@ requirements:
     - rank-bm25 >=0.2
     - aiofiles >=24.1.0
     - colorama >=0.4
-    - snowballstemmer >=2.2
+    - snowballstemmer >=2.2,<2.3
     - pydantic >=2.10
     - pyopenssl >=24.3.0
     - psutil >=6.1.1
@@ -54,6 +54,9 @@ requirements:
     - pyperclip
     - chardet
     - lark
+    - alphashape
+    - sentence-transformers
+    - shapely
 
 tests:
   - python:
