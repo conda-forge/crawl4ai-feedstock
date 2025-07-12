@@ -53,6 +53,7 @@ requirements:
     - humanize
     - pyperclip
     - chardet
+    - lark
 
 tests:
   - python:
