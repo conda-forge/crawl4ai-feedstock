@@ -1,5 +1,6 @@
 context:
-  version: "0.6.3"
+  version: "0.7.0"
+  python_min: "3.10"
 
 package:
   name: crawl4ai
@@ -7,7 +8,7 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/c/crawl4ai/crawl4ai-${{ version }}.tar.gz
-    sha256: 38e32222969e228c57959b0dbdbef619c2cd7850960ef26a6155ce05c3bb4a2a
+    sha256: c6925341c8358ef8b30793fa3864b1f9002f9b24dbc5e661401eb78cfa762f57
 
 build:
   number: 0
@@ -38,7 +39,7 @@ requirements:
     - rank-bm25 >=0.2
     - aiofiles >=24.1.0
     - colorama >=0.4
-    - snowballstemmer >=2.2
+    - snowballstemmer >=2.2,<2.3
     - pydantic >=2.10
     - pyopenssl >=24.3.0
     - psutil >=6.1.1
@@ -52,6 +53,10 @@ requirements:
     - humanize
     - pyperclip
     - chardet
+    - lark
+    - alphashape
+    - sentence-transformers
+    - shapely
 
 tests:
   - python:
