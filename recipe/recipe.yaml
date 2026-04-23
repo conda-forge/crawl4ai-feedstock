@@ -1,5 +1,5 @@
 context:
-  version: "0.7.2"
+  version: "0.7.4"
   python_min: "3.10"
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/c/crawl4ai/crawl4ai-${{ version }}.tar.gz
-    sha256: 9544283e41febda44a91544f104fe9d1e1936511dda9c7f486d4638e764ed6f3
+    sha256: 68974cab5ef318c45f58657b0b23741e9cdd3df61b5824f024e506fee12bf99f
 
 build:
   number: 0
